@@ -7,10 +7,9 @@ This repository aim to provide **a simulation of energy consumption of a federat
 2. Access to main.m and Run software in the MATLAB software
 3. Click "Run" button in under "Editor" tab in menu bar
 ![matlab_toolbar](https://raw.githubusercontent.com/Bellypoly/On_simulating_energy_consumption_of_federated_learning_systems/main/document/toolbar.png)
-4. Adjust a number of local iteration (N) and global iteration (M) on line 3 and 4 in "main.m" to simulate energy consumption
+4. Adjust a number of local iteration (N) and global iteration (M) on line 3 and 4 in "main.m" to simulate energy consumption. The output will show in "Command window" or in graph.
 ![](https://raw.githubusercontent.com/Bellypoly/On_simulating_energy_consumption_of_federated_learning_systems/main/document/config_m_n.png)
-<img src="https://raw.githubusercontent.com/Bellypoly/On_simulating_energy_consumption_of_federated_learning_systems/main/document/config_m_n.PNG" width="600"/>
-5. The output will show in "Command window" or in graph
+&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/Bellypoly/On_simulating_energy_consumption_of_federated_learning_systems/main/document/config_m_n.PNG" width="600"/>
 
 ## 1. Experiment Setting
 
