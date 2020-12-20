@@ -1,4 +1,3 @@
-
 # On Simulating Energy Consumption of Federated Learning Systems 
 
 This repository aim to provide **a simulation of energy consumption of a federated learning system based on the non-orthogonal multiple access (NOMA) transmission protocols**, proposed by Mo et. al. Energy consumption is computed during training along with energy consumed by communications between local machines and the server.
@@ -14,7 +13,6 @@ This repository aim to provide **a simulation of energy consumption of a federat
 # Project Description
 a simulation of energy consumption of a federated learning system consist of one **central server** and a set of 𝒦 ≜ {1,2, ...,n-1, n} **local machines** (in Figure, each hospital are shown as a local machines)<br>
 <img alt="Federated Learning Workflow " src="https://miro.medium.com/max/1004/1*TdAsPh83Di4YkozLUxYz6Q.png" width="60%"/>
-![Federated Learning Workflow ](https://miro.medium.com/max/1004/1*TdAsPh83Di4YkozLUxYz6Q.png)
 credit : https://rb.gy/bc4zmm
 
 In general, the federated learning system would follow the 4 steps below.
