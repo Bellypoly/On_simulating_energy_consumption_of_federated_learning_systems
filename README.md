@@ -12,7 +12,7 @@ This repository aim to provide **a simulation of energy consumption of a federat
 
 # Project Description
 a simulation of energy consumption of a federated learning system consist of one **central server** and a set of 𝒦 ≜ {1,2, ...,n-1, n} **local machines** (in Figure, each hospital are shown as a local machines)<br>
-<img alt="Federated Learning Workflow " src="https://miro.medium.com/max/1004/1*TdAsPh83Di4YkozLUxYz6Q.png" width="60%"/>
+&nbsp;&nbsp;&nbsp;<img alt="Federated Learning Workflow " src="https://miro.medium.com/max/1004/1*TdAsPh83Di4YkozLUxYz6Q.png" width="60%"/><br>
 credit : https://rb.gy/bc4zmm
 
 In general, the federated learning system would follow the 4 steps below.
@@ -22,7 +22,7 @@ In general, the federated learning system would follow the 4 steps below.
 4. **central server aggregate local weight and updated global weights**: The server aggregates all the uploaded local weight from *n* local machines and updates the global weight (Δ𝑤) by averaging them
 
 From step 1 to 4, the process would repeat in a global iteration (𝕄)
-> This project set up has 1 central server and 3 local machines. The configuration in a central server and each local machines are in folder "**class**"
+> This project set up has **1 central server and 3 local machines**. The configuration in a central server and each local machines are in folder "**class**"
 
 ## 0. Software Structure
 The structure of this project is as shown below the table.
