@@ -1,6 +1,6 @@
 function signal = build_data_to_signal(data)
 % --------------------------------------------------------------------- %
-%| IEEE754 Double precision floating point number. ~ length 64 bits    |%
+%| IEEE754 Single precision floating point number. ~ length 32 bits    |%
 %|  1    bit    (31)     - s - sign                                    |%
 %|  8    bits   (30-23)  - e - exponent                                |%
 %|  23   bits   (22- 0)  - m - floating point number (mantissa)        |%
