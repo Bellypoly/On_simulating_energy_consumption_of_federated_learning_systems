@@ -206,7 +206,7 @@ Our considered datasets, [MNIST](http://yann.lecun.com/exdb/mnist/) are located 
  - Setting at **Local machine**
 	 - local machine#1 : (MNIST train/test dataset - 300/1,000 samples), CPU model = Cortex-A76
 	 - local machine#2 : (MNIST train/test dataset - 300/1,000 samples), CPU model = Samsung-M1
-	 - local machine#3 : (MNIST train/test dataset - 400/1,000 samples) CPU model = Cortex-A76
+	 - local machine#3 : (MNIST train/test dataset - 400/1,000 samples), CPU model = Cortex-A76
 
 | parameter | machine#1 | machine#2 | machine#3 | Description |
 |--|--|--|--|--|
