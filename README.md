@@ -243,7 +243,3 @@ LeNet-1 was initially trained on <a href="https://github.com/Bellypoly/On_simula
 # <div name="ref">Reference</div>
  - [Energy-Efficient Federated Edge Learning with Joint Communication and Computation Design](https://arxiv.org/abs/2003.00199) by Mo et. al.
  - Y. LeCun, B. Boser, J.S. Denker, D. Henderson, R.E. Howard, W. Hubbard, and L.D. Jackel, [Handwritten digit recognition with a back-propagation network](https://towardsdatascience.com/understanding-lenet-a-detailed-walkthrough-17833d4bd155#) (1990), In Touretzky, D., editor, Advances in Neural Information Processing Systems 2 (NIPS*89), Denver, CO. Morgan Kaufmann
-
-
-# Reference
- - [Energy-Efficient Federated Edge Learning with Joint Communication and Computation Design](https://arxiv.org/abs/2003.00199) by Mo et. al.
