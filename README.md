@@ -200,6 +200,49 @@ To visualization and show the experiment result as a graph or output in command 
 Our considered datasets, [MNIST](http://yann.lecun.com/exdb/mnist/) are located in folder “dataset”. If you want to use another dataset you can place it in this path and then change a file configuration in the file “[class/device.m](https://github.com/Bellypoly/On_simulating_energy_consumption_of_federated_learning_systems/blob/main/class/device.m)” (line 42-46) and “[class/server.m](https://github.com/Bellypoly/On_simulating_energy_consumption_of_federated_learning_systems/blob/main/class/server.m)” (line 18-21)
 
 # Experiment Setting
+ - 1 central server and 3 local machines.
+ - Setting at **Central server** : (MNIST train/test dataset - 8,000/2,000 samples)
+	 - test dataset : MNIST 2,000 samples
+ - Setting at **Local machine**
+	 - local machine#1 : (MNIST train/test dataset - 300/1,000 samples), CPU model = Cortex-A76
+	 - local machine#2 : (MNIST train/test dataset - 300/1,000 samples), CPU model = Samsung-M1
+	 - local machine#3 : (MNIST train/test dataset - 400/1,000 samples) CPU model = Cortex-A76
+
+| parameter | machine#1 | machine#2 | machine#3 | Description |
+|--|--|--|--|--|
+|si|0.0045x10<sup>-21</sup>|0.0049x10<sup>-21</sup>|0.0045x10<sup>-21</sup>| Const. coefficient depend on chip architecture |
+|p_tx_db|21|27|21| Transmission power in dB @ local machine|
+|f|3x10<sup>9</sup> (Hz)|2.6x10<sup>9</sup> (Hz)|3x10<sup>9</sup> (Hz)| CPU frequencY_train of whole operation duration|
+|c|16 (Flop/Cycle)|6 (Flop/Cycle)|16 (Flop/Cycle)| the number of FLOPs in CPU cycle|
+|d|100 (m)|150 (m)|200 (m)| distance between Device to Server|
+
+ - Setting in **CNN Model** : Lenet-1 architecture
+LeNet-1 was initially trained on <a href="https://github.com/Bellypoly/On_simulating_energy_consumption_of_federated_learning_systems#ref">LeCun’s</a> USPS database, where it incurred a 1.7% error rate. LeNet-1 was a small CNN, which merely included five layers. The network was developed to accommodate minute, single-channel images of size (28×28). It boasted a total of 3,246 trainable parameters and 139,402 connections. This processing was done by using a customised input layer. The five layers of the LeNet-1 were as follows:
+	 - <ins>imageInputLayer</ins>: input size = *[28x28]*
+	 - <ins>Layer C1</ins>: Convolution Layer (num_kernels=4, kernel_size=5×5, padding=0, stride=1) *- [5x5x4]*
+	 - <ins>Layer S2</ins>: Average Pooling Layer (kernel_size=2×2, padding=0, stride=2) - [2x2]
+	 - <ins>Layer C3</ins>: Convolution Layer (num_kernels=12, kernel_size=5×5, padding=0, stride=1) *- [5x5x12]*
+	 - <ins>Layer S4</ins>: Average Pooling Layer (kernel_size=2×2, padding=0, stride=2) *- [2x2]*
+	 - <ins>Layer F5</ins>: Fully Connected Layer (out_features=10) *- [10]*
+![enter image description here](https://github.com/grvk/lenet-1/raw/master/data/LeNet-1-architecture.png?raw=true)
+ - Setting in **communication** part
+
+| parameter | value | description |
+|--|--|--|
+| path_loss_exp | 3 | path loss exponent |
+| d_0 | 1 (m) | reference distance |
+| d_1 | 100 (m) | distance between machine#1 to central server |
+| d_2 | 150 (m) | distance between machine#2 to central server |
+| d_3 | 200 (m) | distance between machine#3 to central server |
+| d_max | 500 (m) | maximum distance for attenuation calculation |
+| h_0 | 30 | channel power gain at a reference distance of d_0 --> β_0 |
+| bw | 2x10<sup>6</sup> (Hz) | bandwidth |
+| noise_power_db | -100 (dBm/Hz)| noise power @ server (in dBm) |
+
+
+# <div name="ref">Reference</div>
+ - [Energy-Efficient Federated Edge Learning with Joint Communication and Computation Design](https://arxiv.org/abs/2003.00199) by Mo et. al.
+ - Y. LeCun, B. Boser, J.S. Denker, D. Henderson, R.E. Howard, W. Hubbard, and L.D. Jackel, [Handwritten digit recognition with a back-propagation network](https://towardsdatascience.com/understanding-lenet-a-detailed-walkthrough-17833d4bd155#) (1990), In Touretzky, D., editor, Advances in Neural Information Processing Systems 2 (NIPS*89), Denver, CO. Morgan Kaufmann
 
 
 # Reference
