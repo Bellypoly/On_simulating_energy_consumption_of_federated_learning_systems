@@ -1,4 +1,3 @@
-
 # On Simulating Energy Consumption of Federated Learning Systems 
 
 This repository aim to provide **a simulation of energy consumption of a federated learning system based on the non-orthogonal multiple access (NOMA) transmission protocols**, proposed by Mo et. al. Energy consumption is computed during training along with energy consumed by communications between local machines and the server.
@@ -107,15 +106,15 @@ When prepared binary data to build a signal to transmit to a central server, you
 
 |Input|Description|
 |-|-|
-|device1|local machine object #1 that you want to transmit signal|
-|device2|local machine object #2 that you want to transmit signal|
-|device3|local machine object #3 that you want to transmit signal|
-|server|central server object|
-|time_limit|the maximum duration time limit in second that you allow sending a signal for each time|
+|`device1`|local machine object #1 that you want to transmit signal|
+|`device2`|local machine object #2 that you want to transmit signal|
+|`device3`|local machine object #3 that you want to transmit signal|
+|`server`|central server object|
+|`time_limit`|the maximum duration time limit in second that you allow sending a signal for each time|
 |<div align="center">**Output**</div>|<div align="center">**Description**</div>|
-|device1|local machine object #1 that you want to transmit signal|
-|device2|local machine object #2 that you want to transmit signal|
-|device3|local machine object #3 that you want to transmit signal|
+|`device1`|local machine object #1 that you want to transmit signal|
+|`device2`|local machine object #2 that you want to transmit signal|
+|`device3`|local machine object #3 that you want to transmit signal|
 
 ## 6. <a href="https://github.com/Bellypoly/On_simulating_energy_consumption_of_federated_learning_systems/blob/main/decode_at_server.m" name="decode_at_server">decode_at_server()</a>
 On the central server side, the received signal that are sent via NOMA protocol would include additive white Gaussian noise (AWGN) which come from communication process. The received signal  would be decoded by demodulation to get a signal from each local machine.
@@ -124,15 +123,15 @@ On the central server side, the received signal that are sent via NOMA protocol 
 
 |Input|Description|
 |-|-|
-|device1|local machine object #1 that you want to transmit signal|
-|device2|local machine object #2 that you want to transmit signal|
-|device3|local machine object #3 that you want to transmit signal|
-|rx_signal|received signal at central server from all local machine|
-|time_limit|the maximum duration time limit in second that you allow sending a signal for each time|
+|`device1`|local machine object #1 that you want to transmit signal|
+|`device2`|local machine object #2 that you want to transmit signal|
+|`device3`|local machine object #3 that you want to transmit signal|
+|`rx_signal`|received signal at central server from all local machine|
+|`time_limit`|the maximum duration time limit in second that you allow sending a signal for each time|
 |<div align="center">**Output**</div>|<div align="center">**Description**</div>|
-|device1|local machine object #1 that you want to transmit signal|
-|device2|local machine object #2 that you want to transmit signal|
-|device3|local machine object #3 that you want to transmit signal|
+|`device1`|local machine object #1 that you want to transmit signal|
+|`device2`|local machine object #2 that you want to transmit signal|
+|`device3`|local machine object #3 that you want to transmit signal|
 
 ## 6. <a href="https://github.com/Bellypoly/On_simulating_energy_consumption_of_federated_learning_systems/blob/main/build_signal_to_data.m" name="build_signal_to_data">build_signal_to_data()</a>
 The decoded signal at the server is in decimal format. We have to convert the data format that we have to convert and shape data in a format that can use to do a weight aggregation process and use as an initial weight for the next global iteration (𝕄).
@@ -141,10 +140,10 @@ The decoded signal at the server is in decimal format. We have to convert the da
 
 |Input|Description|
 |-|-|
-|signal_decode|decoded signal from each local machine|
+|`signal_decode`|decoded signal from each local machine|
 |<div align="center">**Output**</div>|<div align="center">**Description**</div>|
-|bin_to_data_marray_w1|weight from the signal that readies for weight aggregation process at a central server (for **convolution layer 1** in CNN which based on Lenet-1 architecture)|
-|bin_to_data_marray_w2|weight from the signal that readies for weight aggregation process at a central server (for **convolution layer 2** in CNN which based on Lenet-1 architecture)|
+|`bin_to_data_marray_w1`|weight from the signal that readies for weight aggregation process at a central server (for **convolution layer 1** in CNN which based on Lenet-1 architecture)|
+|`bin_to_data_marray_w2`|weight from the signal that readies for weight aggregation process at a central server (for **convolution layer 2** in CNN which based on Lenet-1 architecture)|
 
 ## 7. <a href="https://github.com/Bellypoly/On_simulating_energy_consumption_of_federated_learning_systems/blob/main/time_and_energy_upload.m" name="time_and_energy_upload">time_and_energy_upload()</a>
 The duration time since a transmit signal from each local machine until the central server receives the whole part of the signal would be used to estimate energy consumption in the communication part. So, `time_and_energy_upload` would consider these conditions to calculate.
