@@ -210,11 +210,11 @@ Our considered datasets, [MNIST](http://yann.lecun.com/exdb/mnist/) are located 
 
 | parameter | machine#1 | machine#2 | machine#3 | Description |
 |--|--|--|--|--|
-|si|0.0045x10<sup>-21</sup>|0.0049x10<sup>-21</sup>|0.0045x10<sup>-21</sup>| Const. coefficient depend on chip architecture |
-|p_tx_db|21|27|21| Transmission power in dB @ local machine|
-|f|3x10<sup>9</sup> (Hz)|2.6x10<sup>9</sup> (Hz)|3x10<sup>9</sup> (Hz)| CPU frequencY_train of whole operation duration|
-|c|16 (Flop/Cycle)|6 (Flop/Cycle)|16 (Flop/Cycle)| the number of FLOPs in CPU cycle|
-|d|100 (m)|150 (m)|200 (m)| distance between Device to Server|
+|`si`|0.0045x10<sup>-21</sup>|0.0049x10<sup>-21</sup>|0.0045x10<sup>-21</sup>| Const. coefficient depend on chip architecture |
+|`p_tx_db`|21|27|21| Transmission power in dB @ local machine|
+|`f`|3x10<sup>9</sup> (Hz)|2.6x10<sup>9</sup> (Hz)|3x10<sup>9</sup> (Hz)| CPU frequencY_train of whole operation duration|
+|`c`|16 (Flop/Cycle)|6 (Flop/Cycle)|16 (Flop/Cycle)| the number of FLOPs in CPU cycle|
+|`d`|100 (m)|150 (m)|200 (m)| distance between Device to Server|
 
  - Setting in **CNN Model** : Lenet-1 architecture
 LeNet-1 was initially trained on <a href="https://github.com/Bellypoly/On_simulating_energy_consumption_of_federated_learning_systems#ref">LeCun’s</a> USPS database, where it incurred a 1.7% error rate. LeNet-1 was a small CNN, which merely included five layers. The network was developed to accommodate minute, single-channel images of size (28×28). It boasted a total of 3,246 trainable parameters and 139,402 connections. This processing was done by using a customised input layer. The five layers of the LeNet-1 were as follows:
@@ -229,15 +229,15 @@ LeNet-1 was initially trained on <a href="https://github.com/Bellypoly/On_simula
 
 | parameter | value | description |
 |--|--|--|
-| path_loss_exp | 3 | path loss exponent |
-| d_0 | 1 (m) | reference distance |
-| d_1 | 100 (m) | distance between machine#1 to central server |
-| d_2 | 150 (m) | distance between machine#2 to central server |
-| d_3 | 200 (m) | distance between machine#3 to central server |
-| d_max | 500 (m) | maximum distance for attenuation calculation |
-| h_0 | 30 | channel power gain at a reference distance of d_0 --> β_0 |
-| bw | 2x10<sup>6</sup> (Hz) | bandwidth |
-| noise_power_db | -100 (dBm/Hz)| noise power @ server (in dBm) |
+| `path_loss_exp` | 3 | path loss exponent |
+| `d_0` | 1 (m) | reference distance |
+| `d_1` | 100 (m) | distance between machine#1 to central server |
+| `d_2` | 150 (m) | distance between machine#2 to central server |
+| `d_3` | 200 (m) | distance between machine#3 to central server |
+| `d_max` | 500 (m) | maximum distance for attenuation calculation |
+| `h_0` | 30 | channel power gain at a reference distance of d_0 --> β_0 |
+| `bw` | 2x10<sup>6</sup> (Hz) | bandwidth |
+| `noise_power_db` | -100 (dBm/Hz)| noise power @ server (in dBm) |
 
 
 # <div name="ref">Reference</div>
